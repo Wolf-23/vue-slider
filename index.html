@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="col-12 p-5">
-                        <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel"  @mouseover="clear" v-on:keyup.left="prev" v-on:keyup.right="next">
+                        <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel"  @mouseover="clear" @mouseleave="increase" v-on:keyup.left="prev" v-on:keyup.right="next">
                             <div class="my-carousel-images">
                                 
                                 <div class="my-carousel-item active">

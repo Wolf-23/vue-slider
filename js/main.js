@@ -31,6 +31,7 @@ const app = new Vue({
             },
         ],
         currentSlide: 0,
+        interval: null,
     },
     methods: {
         next() {
@@ -51,10 +52,10 @@ const app = new Vue({
             this.currentSlide = index;
         },
         increase() {
-            setInterval(this.next, 3000);
+            this.interval = setInterval(this.next, 3000);
         },
         clear() {
-            clearInterval(this.increase);
+            clearInterval(this.interval);
         }
     },
     mounted() {
