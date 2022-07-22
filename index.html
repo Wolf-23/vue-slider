@@ -24,18 +24,18 @@
 
     <main>
         <div id="app">
-            <div class="container-fluid p-5">
+            <div class="container-fluid p-5 outline-none" @keyup.left="prev" @keydown.right="next" tabindex="0">
                 <div class="row text-center">
                     <div class="col-12 p-3" id="my-before-carousel">
 
                     </div>
 
                     <div class="col-12 p-5">
-                        <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel"  @mouseover="clear" @mouseleave="increase" v-on:keyup.left="prev" v-on:keyup.right="next">
+                        <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel" @mouseover="clear" @mouseleave="increase" @keyup.left="prev" @keydown.right="next">
                             <div class="my-carousel-images">
                                 
                                 <div class="my-carousel-item active">
-                                    <img class="img-fluid" :src="images[currentSlide].url" :alt="images[currentSlide].title">
+                                    <img class="img-fluid" :src="images[currentSlide].url" :alt="images[currentSlide].title" >
                                     <div class="item-description px-3">
                                         <h2>{{images[currentSlide].title}}</h2>
                                         <p>{{images[currentSlide].description}}</p>

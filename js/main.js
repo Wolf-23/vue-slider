@@ -61,7 +61,6 @@ const app = new Vue({
     mounted() {
         this.increase();
     }
-        
       
   })
 

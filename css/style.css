@@ -110,3 +110,7 @@ div#my-carousel .my-thumbnails .my-thumbnail.active{
 }
 
 
+.outline-none{
+    outline: none;
+}
+
