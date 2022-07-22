@@ -49,7 +49,18 @@ const app = new Vue({
         },
         clickThumb(index) {
             this.currentSlide = index;
-        } 
+        },
+        increase() {
+            setInterval(this.next, 3000);
+        },
+        clear() {
+            clearInterval(this.increase);
+        }
+    },
+    mounted() {
+        this.increase();
     }
+        
+      
   })
 
